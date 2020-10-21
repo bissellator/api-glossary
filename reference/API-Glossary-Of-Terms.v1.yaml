@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: API Glossary Of Terms
+  version: '1.0'
+  description: A taxonomy for a glossary of terms
+  contact:
+    name: 'Michael Bissell '
+    url: 'http://michaelbissell.com'
+    email: bissellator@gmail.com
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /terms:
+    get:
+      summary: /terms
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  termId:
+                    type: string
+                  term:
+                    type: string
+                  tags:
+                    type: array
+                    items: {}
+              examples:
+                example-2:
+                  value:
+                    termId: string
+                    term: string
+                    tags:
+                      - string
+      operationId: get-terms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+      description: List terms in alphabetical order
+components:
+  schemas: {}
+  securitySchemes:
+    API Key - 1:
+      type: oauth2
+security: []
