@@ -37,16 +37,11 @@ paths:
                     tags:
                       - string
       operationId: get-terms
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
       description: List terms in alphabetical order
 components:
   schemas: {}
   securitySchemes:
-    API Key - 1:
-      type: oauth2
+    apikey:
+      type: http
+      scheme: basic
 security: []
